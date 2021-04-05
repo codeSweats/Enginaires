@@ -1,6 +1,4 @@
-const G = require('glob');
-const { S } = require('xmlchars/xml/1.0/ed5');
-const Employee = require('../lib/Employee');
+const Engineer = require('../lib/Engineer');
 
 test('Could instantiate Engineer and set up gitHub by a constructor', () => {
     const gitHub = 'gitHubUserId'
@@ -16,6 +14,6 @@ test('Could get Engineer as output for getRole', () => {
 
 test('Could get gitHub user name via getGitHub method', () => {
     const name = "Francis";
-    const engr = new Engineer(name, 13, 'b@S.com', 'gitHubUser-b');
+    const engr = new Engineer(name, 13, 'b@c.com', 'gitHubUser-b');
     expect(engr.getGitHub()).toBe('gitHubUser-b');
 })
