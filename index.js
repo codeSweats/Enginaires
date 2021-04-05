@@ -2,6 +2,35 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
+const Employee = require('./lib/Employee');
+
+const out_dir = path.resolve(__dirname, 'output');
+const out_path = path.join(__outdir, 'team.HTML');
+const renderPage = require('./src/pageTemplate.js');
+
+const myTeamMembers = [];
+const idArray = [];
+function myMenu() {
+    function createManager() {
+        console.log('Build the Team');
+        inquirer.prompt({
+            {
+                type: 'input',
+                name: 'managerName',
+                message: "Give manager's name.",
+                validate: res => {
+                    if(res !== ""){
+                        return true
+                    }
+                    return 'Please enter at least one character!'
+                }
+            }
+        })
+    }
+}
 
 
 const questions = [
