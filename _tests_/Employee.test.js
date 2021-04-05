@@ -1,5 +1,3 @@
-const { test, expect } = require('@jest/globals');
-const { getMaxListeners } = require('node:process');
 const Employee = require('../lib/Employee');
 
 test('Could instantiate Employee instance', () => {
